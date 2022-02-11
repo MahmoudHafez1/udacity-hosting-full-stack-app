@@ -5,8 +5,8 @@
         "back-end:install":"cd udagram-backend && npm install",
         "front-end:build":"cd udagram-frontend && npm run build",
         "back-end:build":"cd udagram-backend && npm run build",
-        "install":"front-end:install && back-end:install",
-        "build": "front-end:build && back-end:build"
+        "install":"npm run front-end:install && npm run back-end:install",
+        "build": "npm run front-end:build && npm run back-end:build"
     },
     "devDependencies": {}
 }
