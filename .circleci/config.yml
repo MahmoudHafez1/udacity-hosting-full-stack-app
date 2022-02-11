@@ -21,7 +21,7 @@ jobs:
       - eb/setup
       - run:
           name: install the dependencies
-          command: npm install
+          command: npm run install
       - run:
           name: build the project
           command: npm run build
