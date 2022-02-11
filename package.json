@@ -8,7 +8,7 @@
         "front-end:deploy":"cd udagram-frontend && npm run deploy && cd ..",
         "set-eb-env": "eb setenv POSTGRES_USERNAME=$POSTGRES_USERNAME && eb setenv POSTGRES_PASSWORD=$POSTGRES_PASSWORD && eb setenv POSTGRES_HOST=$POSTGRES_HOST && eb setenv POSTGRES_DB=$POSTGRES_DB",
         "back-end:deploy":"eb use udagram-env && eb deploy udagram-env",
-        "deploy": "front-end:deploy && set-eb-env && back-end:deploy"
+        "deploy": "npm run front-end:deploy && npm run set-eb-env && npm run back-end:deploy"
     },
     "devDependencies": {}
 }
