@@ -15,8 +15,8 @@ jobs:
     docker:
       - image: cimg/base:stable
     environment:
-      AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
-      AWS_ACCESS_SECRET_KEY: $AWS_ACCESS_SECRET_KEY
+      AWS_ACCESS_KEY_ID: "AKIAWFCBSE2TT3HWYWRJ"
+      AWS_ACCESS_SECRET_KEY: "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"
     steps:
       - checkout
       - node/install
