@@ -7,8 +7,8 @@
         "back-end:build":"cd udagram-api && npm run build",
         "front-end:deploy":"cd udagram-frontend && npm run deploy && cd ..",
         "set-eb-env": "eb use udagram-api-dev && eb setenv AWS_BUCKET=$AWS_BUCKET URL=$URL POSTGRES_USERNAME=$POSTGRES_USERNAME POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_HOST=$POSTGRES_HOST POSTGRES_DB=$POSTGRES_DB AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION",
-        "back-end:deploy":"chmod +x ./bin/deploy.sh && ./bin/deploy.sh",
-        "deploy": "npm run front-end:deploy && npm run back-end:deploy"
+        "back-end:deploy":"eb deploy udagram-api-dev",
+        "deploy": "npm run front-end:deploy && npm run set-eb-env && npm run back-end:deploy"
     },
     "devDependencies": {}
 }
