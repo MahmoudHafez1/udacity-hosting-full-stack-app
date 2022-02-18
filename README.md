@@ -21,20 +21,20 @@
 
 # Infrastructure
 
-## RDS
+### RDS
 
 Relational Database Service (Postgres)
 
-## EC2
+### EC2
 
 Elastic Beanstalk to run the back-end and communicate with database and front-end
 
-## S3
+### S3
 
 Bucket hosts static website (front-end files) and provide endpoint to be accessed
 
-![Infrastructure diagram](docs/diagrams/pipeline.png)
+![Infrastructure diagram](docs/diagrams/Infrastructure.png)
 
 # Links
 
-- website link: [http://hafez-udagram.s3-website-us-east-1.amazonaws.com/]: http://hafez-udagram.s3-website-us-east-1.amazonaws.com/
+- website link: http://hafez-udagram.s3-website-us-east-1.amazonaws.com/
