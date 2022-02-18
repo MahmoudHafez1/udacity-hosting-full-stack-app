@@ -1,5 +1,5 @@
 # This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
-version: 2.1
+version: 2
 
 # Orbs are reusable packages of CircleCI configuration that you may share across projects, enabling you to create encapsulated, parameterized commands, jobs, and executors that can be used across multiple projects.
 # See: https://circleci.com/docs/2.0/orb-intro/
@@ -12,6 +12,9 @@ orbs:
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 jobs:
   build:
+    branches:
+      only:
+        - main
     docker:
       - image: cimg/base:stable
     steps:
@@ -34,12 +37,3 @@ jobs:
       - run:
           name: deploy app
           command: npm run deploy
-
-workflows:
-  build:
-    jobs:
-      - test:
-          filters:
-            branches:
-              only:
-                - main
