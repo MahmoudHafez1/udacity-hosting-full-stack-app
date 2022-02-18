@@ -12,12 +12,6 @@ orbs:
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 jobs:
   build:
-    jobs:
-      - test:
-          filters:
-            branches:
-              only:
-                - main
     docker:
       - image: cimg/base:stable
     steps:
@@ -40,3 +34,12 @@ jobs:
       - run:
           name: deploy app
           command: npm run deploy
+
+workflows:
+  build:
+    jobs:
+      - test:
+          filters:
+            branches:
+              only:
+                - main
